@@ -71,9 +71,9 @@
 					
 				<%for(int i = 0; i < albumTable.size(); i++){%>	
                 <li>
-                    <p><%=albumTable.get(i).get(1)%></p>
-                    <p class="sm--hide"><%=albumTable.get(i).get(3)%></p>
-                    <p class= "sm--right"><%=albumTable.get(i).get(6)%></p>
+                    <p id= "title"><%=albumTable.get(i).get(1)%></p>
+                    <p class="sm--hide" id= "recordingCompany"><%=albumTable.get(i).get(3)%></p>
+                    <p class= "sm--right" id= "length"><%=albumTable.get(i).get(6)%></p>
                     <p class="sm--hide"><span class="catty-cloud"> CLOUD SYNC</span></p>
                     
                 </li>

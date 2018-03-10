@@ -79,9 +79,9 @@
 					
 				<%for(int i = 0; i < artistTable.size(); i++){%>	
                 <li>
-                    <p><%=artistTable.get(i).get(1)%></p>
-                    <p class="sm--hide"><%=artistTable.get(i).get(3)%></p>
-                    <p class= "sm--right"><%=artistTable.get(i).get(4)%></p>
+                    <p id = "firstName"><%=artistTable.get(i).get(1)%></p>
+                    <p class="sm--hide" id= "bandName"><%=artistTable.get(i).get(3)%></p>
+                    <p class= "sm--right" id= "bio"><%=artistTable.get(i).get(4)%></p>
                     <p class="sm--hide"><span class="catty-cloud"> CLOUD SYNC</span></p>
                     
                 </li>

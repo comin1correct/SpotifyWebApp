@@ -1,10 +1,10 @@
 <section>
             <header class="showcase">
                 <ul>
-                    <li class="start"><a href="#" class="btn">Featured</a></li>
-                    <li><a href="#" class="btn">Genres & Moods</a></li>
-                    <li><a href="#" class="btn">New Releases</a></li>
-                    <li><a href="#" class="btn">Discover</a></li>
+                    <li class="start" id = "featured"><a href="#" class="btn">Featured</a></li>
+                    <li><a href="#" class="btn" id= "genresMood">Genres & Moods</a></li>
+                    <li><a href="#" class="btn" id="newRelease">New Releases</a></li>
+                    <li><a href="#" class="btn" id = "discover">Discover</a></li>
                 </ul>
             </header>
         </section>

@@ -8,6 +8,19 @@
     4. HTML5(audioPlayer) - https://www.youtube.com/watch?v=vtZCMTtP-0Y
     5. https://medium.com/flexbox-and-grids/how-to-efficiently-master-the-css-grid-in-a-jiffy-585d0c213577
 -->
+<!-- 
+=====================================
+~~~~~~~~~~~~~IMPORTANT~~~~~~~~~~~~~~~
+===================================== 
+https://stackoverflow.com/questions/
+12316540/tomcat-is-not-deploying-my-web-project-from-eclipse
+
+
+Select project > properties > 
+deployment assembly > 
+
+mysql-connector must be in Source
+-->
 
 <!--
 =====================================

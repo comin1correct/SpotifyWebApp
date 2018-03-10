@@ -30,11 +30,22 @@ mysql-connector must be in Source
 <jsp:include page="main/header.jsp">
 <jsp:param name="pageTitle" value="Spotify"/>
 </jsp:include>
+
+<body class = "bg-default">
+<!--
+=====================================
+~~~~~~~~~~~~~~~SIDEBAR~~~~~~~~~~~~~~~
+=====================================
+ -->
+<%@include file= "main/sidebar.jsp" %>
+
+
  <!--
 =====================================
 ~~~~~~~~~~~~~~SHOWCASE~~~~~~~~~~~~~~~
 =====================================
  --> 
+ 
     <div class="music-showcase">
         <script>
         		//on load 
@@ -48,7 +59,8 @@ mysql-connector must be in Source
     				$("#album").removeClass("active");
     				$("#artist").removeClass("active");
     				$("#song").removeClass("active");
-            		
+    				$('body').removeClass().addClass('bg-default');
+    			
         			$(".music-showcase").load("home.jsp");
                 }
         		
@@ -72,6 +84,7 @@ mysql-connector must be in Source
 				$("#album").addClass("active");
 				$("#artist").removeClass("active");
 				$("#song").removeClass("active");
+				
             		
                 $(".music-showcase").load("album.jsp");
             }

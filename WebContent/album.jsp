@@ -1,13 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import= "edu.pitt.IS18.SpotifyClone.jsp.*,java.sql.SQLException, java.sql.ResultSet, java.util.*,com.mysql.jdbc.Driver" %>
+<%@ page import= "edu.pitt.IS18.SpotifyClone.jsp.*,java.sql.SQLException, java.sql.ResultSet, java.util.*,com.mysql.jdbc.Driver" %>
 
-<!--
-=====================================
-~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~
-=====================================
- -->
-<link rel="stylesheet" href="stylesheets/albumStyle.css">
+<script>
+$('body').removeClass().addClass('bg-new');
+</script>
+
  <!--
 =====================================
 ~~~~~~~~~~~~~~SHOWCASE~~~~~~~~~~~~~~~

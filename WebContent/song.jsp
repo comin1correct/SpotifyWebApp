@@ -1,22 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import= "edu.pitt.IS18.SpotifyClone.jsp.*,java.sql.SQLException, java.sql.ResultSet, java.util.*,com.mysql.jdbc.Driver" %>
-    
-<!-- Resources:
-    1. https://www.youtube.com/watch?v=moBhzSC455o
-    2. https://gridbyexample.com/
-    3. https://www.bitovi.com/blog/using-css-grid-to-build-a-page-layout
-    4. HTML5(audioPlayer) - https://www.youtube.com/watch?v=vtZCMTtP-0Y
-    5. https://medium.com/flexbox-and-grids/how-to-efficiently-master-the-css-grid-in-a-jiffy-585d0c213577
-    6. https://medium.freecodecamp.org/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af
--->
 
-<!--
-=====================================
-~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~
-=====================================
- -->
-<link rel="stylesheet" href="stylesheets/albumStyle.css">
+<script>
+$('body').removeClass().addClass('bg-new');
+</script>
  <!--
 =====================================
 ~~~~~~~~~~~~~~SHOWCASE~~~~~~~~~~~~~~~

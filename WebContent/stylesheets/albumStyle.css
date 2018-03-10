@@ -1,12 +1,6 @@
 /*CSS Variables*/
 :root{
-    --background-album:linear-gradient(to top, #000000, #434343););
     --grey: rgba(85,85,85,0.5);
-}
-
-body{
-    background: var(--background-album);
-
 }
 
 .main{

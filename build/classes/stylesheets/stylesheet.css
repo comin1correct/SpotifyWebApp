@@ -1,0 +1,320 @@
+/*CSS Variables*/
+:root{
+    --background-b: #247;
+    --background-album:linear-gradient(to top, #000000, #434343););
+    --gradian: #000;
+    --controls: #333;
+    --spotify: #2c5;
+    --light: #fff;
+    --base: #bbb;
+    --shadow: 0 1px 5px rgba(0,0,0,0.9 );
+    --sidebar: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,1));
+    --gradiant: linear-gradient(to top, #24c6dc, #514a9d);
+    --gradiant2:linear-gradient(to right, #348AC7, #7474BF);
+    --gradiant3: linear-gradient(to top, #000000, #302b63, #24243e);
+    /*https://uigradients.com/#Mantle*/
+}
+
+html{
+    /* 1. https://www.youtube.com/watch?v=8KtoC9MpoZ0 - 12:30
+       2. https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+
+    /* tells the browser to account for any border
+       and padding in the values you specify for
+       width and height.*/
+    box-sizing: border-box;
+    font-family: Arial,Helvetica, SansSerif;
+    color: var(--light); /*elements to white*/
+}
+
+.bg-default{
+    background: var(--gradiant3) no-repeat;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.bg-new{
+    background: var(--background-album);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/*Styling on all a tags*/
+.btn{
+    color: var(--base);
+    text-decoration: none;
+}
+.home{
+    color: var(--light);
+    text-decoration: none;
+}
+
+/* .main-nav a:nth-child(n):hover{
+    color: var(--spotify);
+} */
+
+
+/*static - only green item on page (check-mark)*/
+.current a{
+    color:var(--spotify);
+    text-decoration: none;
+    border: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 100px;
+    grid-template-columns: 200px auto;
+    grid-template-areas: "sidebar content"
+                         "footer footer";
+}
+
+/*=============================
+  Sidebar - style
+===============================*/
+
+.sidebar{
+    grid-area: sidebar;
+    background: var(--sidebar);
+    padding-top: 1.6rem;
+    padding-left: 1rem;
+
+    /*user @ bottom*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#spotifyIcon{
+	background-color: var(--shadow);
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--light);
+}
+
+#spotifyIcon:hover{
+	color: var(--spotify);
+}
+
+/*~~~~~~~~~ Search Style~~~~~~~~~~*/
+.search {
+    position: relative;
+    color: var(--base);
+    font-size: 16px;
+}
+
+.search input {
+    width: 150px;
+    height: 40px;
+    background: var(--sidebar);
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: var(--light);
+    padding-left: 45px;
+    border-radius: 2px;
+    outline: none;
+}
+
+.search input {
+    text-indent: 5px;
+}
+.search .fa-search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+/*~~~~^^^^ Search Style ^^^^~~~~*/
+
+
+.main-nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav li{
+    padding-top: 0.6rem;
+}
+
+
+.btn-nav{
+	color: var(--base);
+	text-decoration: none;
+	border: none;
+	outline: none;
+	background: var(--shadow);
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.btn-nav:hover{
+	color: var(--spotify);
+}
+
+.active{
+	color: var(--spotify);
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0 10px;
+}
+
+.user-profile h4{
+    font-size: 0.9rem;
+}
+
+/*=============================
+  Content - style
+===============================*/
+.music-showcase{
+    grid-area: content;
+    /*https://stackoverflow.com/questions/46726732/
+    fixed-header-and-footer-with-scrollable-sidebar-inside-1fr-css-grid-region*/
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.showcase ul{
+    display: flex;
+    flex: 1 0 auto;
+    list-style-type: none;
+    padding: 5px 10px 0;
+    justify-content: center;
+
+}
+
+.showcase li{
+    display: flex;
+    padding: 0 30px;
+    min-height: 50px;
+    align-items: center;
+}
+
+.showcase a{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+
+.start > a{
+    color: var(--light);
+}
+
+.showcase a:hover{
+    color: var(--light);
+}
+
+#box-header{
+    text-align: center;
+}
+
+.boxes{
+    display: grid;
+    grid-gap: 0.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0 0.3rem 0 0.3rem;
+    justify-items: center;
+    align-items: center;
+}
+.box{
+    text-align: center;
+}
+
+.box img{
+    padding: 0;
+    box-shadow: var(--shadow);
+}
+
+/*=============================
+  Footer - style
+===============================*/
+.controls{
+    grid-area: footer;
+    background: var(--controls);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.controls>div {
+    display: flex;
+}
+
+/*~~~~~~~~~~~Current~~~~~~~~~~~*/
+.current{
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.current img{
+    width: 50px;
+    height: 50px;
+}
+
+/*heading margins*/
+.current .song *{
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.current .song > p{
+    color: var(--base);
+    font-size: 0.7rem;
+}
+
+/*~~~~~~~~~~~Player~~~~~~~~~~~*/
+
+.player{
+    flex-direction: column;
+
+}
+
+.player-controls{
+    display: flex;
+    align-items: center;
+}
+
+.player-controls a{
+    padding: 0 10px 0 10px;
+
+}
+.player-controls a:hover{
+    color:var(--light);
+}
+
+.timer{
+    display: flex;
+    justify-content: space-between;
+    color: var(--base);
+    font-size: 0.8rem;
+}
+
+/*~~~~~~~Volume/Playlist~~~~~~*/
+
+.playlist-volume{
+    align-items: center;
+}
+
+.playlist-volume a{
+    padding: 0 10px 0 10px;
+}
